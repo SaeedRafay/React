@@ -1,0 +1,11 @@
+.FriendProfile {
+    width: 400px;
+    text-align: left;
+    margin: 0 auto;
+}
+.FriendProfile ul {
+    list-style: none;
+    margin: 1rem 0 0;
+    border: 1px solid #333;
+    padding: 1rem;
+}
