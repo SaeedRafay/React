@@ -4,7 +4,7 @@ import Button from "../ex2/Button";
 
 function DogGallery() {
   const [dogPhotos, setDogPhotos] = useState([]);
-  const getDogPhoto = async () => {
+  const getDogPhoto = () => {
     return fetch("https://dog.ceo/api/breeds/image/random")
       .then((res) => res.json())
       .then((data) => {
@@ -13,10 +13,10 @@ function DogGallery() {
   };
   return (
     <div className="DogGallery">
-      <Button getDogPhoto={getDogPhoto} /><br />
-      {dogPhotos.length > 0 && (
-        dogPhotos.map((dogPhoto) => <DogPhoto dogPhoto={dogPhoto} />)
-      )}
+      <Button getDogPhoto={getDogPhoto} />
+      <br />
+      {dogPhotos.length > 0 &&
+        dogPhotos.map((dogPhoto) => <DogPhoto dogPhoto={dogPhoto} />)}
     </div>
   );
 }

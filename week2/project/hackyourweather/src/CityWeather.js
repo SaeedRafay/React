@@ -1,6 +1,4 @@
-function CityWeather(props) {
-  const city = props.city;
-
+function CityWeather({ city }) {
   const kelvinToCelcius = (temp) => {
     const kTemp = parseFloat(temp);
     return Math.round(kTemp - 273.15);
@@ -17,9 +15,9 @@ function CityWeather(props) {
         {city.weather[0].description}
       </p>
       <p>
-          min temp: {kelvinToCelcius(city.main.temp_min)}°C <br />
-          max temp: {kelvinToCelcius(city.main.temp_max)}°C <br />
-          location: {city.coord.lat}, {city.coord.lon}
+        min temp: {kelvinToCelcius(city.main.temp_min)}°C <br />
+        max temp: {kelvinToCelcius(city.main.temp_max)}°C <br />
+        location: {city.coord.lat}, {city.coord.lon}
       </p>
     </div>
   );

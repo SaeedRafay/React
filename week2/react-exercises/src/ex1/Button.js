@@ -1,5 +1,4 @@
-function Button(props) {
-  const { getFriend } = props;
+function Button({ getFriend }) {
   return <button onClick={() => getFriend()}>Get a Friend!</button>;
 }
 

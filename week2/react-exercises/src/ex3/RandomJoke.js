@@ -17,12 +17,12 @@ function RandomJoke() {
           "https://official-joke-api.appspot.com/random_joke"
         );
         const data = await res.json();
-        setLoading(false);
         setJoke(() => data);
       } catch (err) {
-        setLoading(false);
         setError(true);
         setErrMsg(err.message);
+      } finally {
+        setLoading(false);
       }
     }
     fetchData();

@@ -1,5 +1,4 @@
-function SearchWeather(props) {
-  const { searchTerm, setSearchTerm, setSearchBtn } = props;
+function SearchWeather({ searchTerm, setSearchTerm, setSearchBtn }) {
   return (
     <div className="searchWeather">
       <input type="text" onChange={(e) => setSearchTerm(e.target.value)} />

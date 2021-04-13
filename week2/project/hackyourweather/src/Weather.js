@@ -43,9 +43,9 @@ function Weather() {
         } catch (err) {
           setError(true);
           setErrMsg(err.message);
+        } finally {
+          setLoading(false);
         }
-
-        setLoading(false);
       }
 
       weatherData();
@@ -67,7 +67,7 @@ function Weather() {
       {cities.length === 0 && <p>Search by the name of a city</p>}
 
       {cities.length > 0 &&
-        cities.map((city, index) => <CityWeather key={index} city={city} />)}
+        cities.map((city) => <CityWeather key={city.id} city={city} />)}
     </div>
   );
 }
