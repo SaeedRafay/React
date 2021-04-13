@@ -1,5 +1,4 @@
-function FriendProfile(props) {
-  const { attrFriend } = props;
+function FriendProfile({ attrFriend }) {
   return (
     <div className="FriendProfile">
       {attrFriend && Object.keys(attrFriend).length !== 0 && (

@@ -5,7 +5,7 @@ import "./Friend.css";
 
 function Friend() {
   const [friend, setFriend] = useState({});
-  const getFriend = async () => {
+  const getFriend = () => {
     return fetch("https://www.randomuser.me/api?results=1")
       .then((res) => res.json())
       .then((data) => {
